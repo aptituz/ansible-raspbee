@@ -1,0 +1,12 @@
+wiggum ansible_host=wiggum.die-welt.net ansible_ssh_user=root
+raspbee ansible_host=192.168.2.144
+
+[all:vars]
+
+[raspberries]
+raspbee
+
+[raspberries:vars]
+ansible_connection=ssh 
+ansible_ssh_user=pi 
+ansible_ssh_pass=raspberry

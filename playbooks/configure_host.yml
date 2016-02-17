@@ -1,0 +1,26 @@
+---
+- name: configure hostname
+  hostname: name="{{ inventory_hostname }}"
+
+# - name: resize rootfs
+#   command: raspi-config --expand-rootfs
+#   register: resize
+
+# - name: restart machine
+#   command: shutdown -r now "Serial console disabled"
+#   async: 0
+#   poll: 0
+#   ignore_errors: true
+#   when: resize|changed
+
+# - local_action: wait_for port=22 host="{{ ansible_ssh_host | default(inventory_hostname) }}" search_regex=OpenSSH delay=10
+#   become: false
+#   when: resize|changed
+
+# - name: add dns record
+#   delegate_to: wiggum
+#   shell: echo {{ item }} | nsupdate -v -k /etc/bind/rndc.key
+#   with_items: 
+#     - 'server 127.0.0.1
+#     - 'update add {{ inventory_hostname }}.local.lan. 86400 A 192.168.254.117'
+#     - send

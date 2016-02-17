@@ -1,0 +1,6 @@
+- hosts: raspberries
+  become: yes
+  tasks:
+    - include: playbooks/configure_host.yml 
+    - include: playbooks/deconz.yml
+    - include: playbooks/desktop.yml

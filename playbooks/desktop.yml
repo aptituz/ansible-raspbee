@@ -1,0 +1,14 @@
+- name: install gui packages
+  package: name={{ item }} state=present
+  with_items:
+    - lxde-core
+    - lightdm
+    - xserver-xorg
+
+- name: enable autologin to pi user
+  copy:
+    src: files/lightdm.conf
+    dest: /etc/lightdm/lightdm.conf
+    owner: root
+    group: root
+
