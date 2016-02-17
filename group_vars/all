@@ -2,4 +2,4 @@
 domain: local.lan
 deconz_packages:
   'deconz': 'http://www.dresden-elektronik.de/rpi/deconz/deconz-latest.deb'
-  'deconz-dev': 'http://www.dresden-elektronik.de/rpi/deconz/deconz-latest.deb'
+  #'deconz-dev': 'http://www.dresden-elektronik.de/rpi/deconz/deconz-dev-latest.deb'
